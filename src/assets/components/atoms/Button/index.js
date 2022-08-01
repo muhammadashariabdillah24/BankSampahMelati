@@ -28,7 +28,6 @@ export const ButtonPrinter = ({ContainerStyle, children}) => {
 
 const styles = StyleSheet.create({
   buttonOutlineStyle: {
-    marginHorizontal: 20,
     borderRadius: 5,
     borderColor: '#fff',
     borderWidth: 1,
@@ -38,7 +37,6 @@ const styles = StyleSheet.create({
     height: 55,
   },
   buttonStyle: {
-    marginHorizontal: 20,
     borderRadius: 5,
     backgroundColor: '#188BCC',
     alignItems: 'center',

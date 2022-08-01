@@ -67,7 +67,10 @@ const Login = () => {
 
         <Text style={styles.textNoHaveAccount}>Belum punya akun ?</Text>
 
-        <Button outline={true} onPress={() => navigation.navigate('Register')}>
+        <Button
+          outline={true}
+          onPress={() => navigation.navigate('Register')}
+          buttonOutlineStyle={{marginHorizontal: 20}}>
           <Text style={styles.textRegisterNow}>Daftar Sekarang</Text>
         </Button>
 
@@ -75,7 +78,8 @@ const Login = () => {
 
         <Button
           outline={true}
-          onPress={() => navigation.navigate('LupaPassword')}>
+          onPress={() => navigation.navigate('LupaPassword')}
+          buttonOutlineStyle={{marginHorizontal: 20}}>
           <Text style={styles.textChangePassword}>Ganti Password</Text>
         </Button>
       </ScrollView>
@@ -120,6 +124,7 @@ const styles = StyleSheet.create({
   buttonEnter: {
     backgroundColor: '#188BCC',
     marginTop: 30,
+    marginHorizontal: 20,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,

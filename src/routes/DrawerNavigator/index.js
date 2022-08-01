@@ -2,7 +2,8 @@ import {View, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Home from '../../screen/Home';
-import IcArrowBack from '../../assets/icon/ic_arrow_left.svg';
+import IcLogout from '../../assets/icon/ic_logout.svg';
+import IcNotification from '../../assets/icon/ic_notification.svg';
 
 const Drawer = createDrawerNavigator();
 
@@ -13,11 +14,19 @@ const DrawerStackNavigator = () => {
         header: ({navigation}) => (
           <View style={styles.containerStyle}>
             <TouchableOpacity
-              style={styles.arrowStyle}
+              style={styles.buttonLogoutStyle}
               onPress={() => {
                 navigation.goBack();
               }}>
-              <IcArrowBack width={22} height={22} />
+              <IcLogout width={22} height={22} />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.buttonNotificationStyle}
+              onPress={() => {
+                console.log('Oke')
+              }}>
+              <IcNotification width={22} height={22} />
             </TouchableOpacity>
           </View>
         ),
@@ -36,11 +45,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#1591D8',
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
   },
-  arrowStyle: {
+  buttonLogoutStyle: {
     marginLeft: 20,
     flexDirection: 'row',
     justifyContent: 'flex-start',
+    alignItems: 'center',
+  },
+  buttonNotificationStyle: {
+    marginRight: 20,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
     alignItems: 'center',
   },
   screenNameStyle: {
